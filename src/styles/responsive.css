@@ -1,0 +1,1804 @@
+/* Small Devices */
+
+@media only screen and (max-width: 992px) {
+
+
+    /* ----------------------------------------------Header CSS---------------------------------------------- */
+
+    .headnav {
+        padding: 12px 0;
+    }
+
+    .navcol {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .navcol ul {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navcol li {
+        padding: 12px 25px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .nav-drop {
+        position: relative;
+    }
+
+    .nav-drop img {
+        position: absolute;
+        top: 35px;
+        right: 45px;
+        filter: invert(1);
+    }
+
+    .menu-btn .fa-bars {
+        color: #000000;
+    }
+
+    nav {
+        position: relative;
+        z-index: 99;
+        width: 100%;
+    }
+
+    nav .wrapper {
+        position: relative;
+        height: 70px;
+        line-height: 70px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .wrapper .logo a {
+        color: #f2f2f2;
+        font-size: 30px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .wrapper .nav-links {
+        display: inline-flex;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links li a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 9px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+        background: #3A3B3C;
+    }
+
+    .nav-links .mobile-item {
+        display: none;
+    }
+
+    .nav-links .drop-menu {
+        position: absolute;
+        background: #ffffff;
+        width: 180px;
+        line-height: 45px;
+        top: 85px;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-links li:hover .drop-menu,
+    .nav-links li:hover .mega-box {
+        transition: all 0.3s ease;
+        top: 70px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .drop-menu li a {
+        width: 100%;
+        display: block;
+        padding: 0 0 0 15px;
+        font-weight: 400;
+        border-radius: 0px;
+    }
+
+    .mega-box {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 0 30px;
+        top: 85px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .mega-box .content {
+        background: #242526;
+        padding: 25px 20px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .mega-box .content .row {
+        width: calc(25% - 30px);
+        line-height: 45px;
+    }
+
+    .content .row img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .content .row header {
+        color: #f2f2f2;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .content .row .mega-links {
+        margin-left: -40px;
+        border-left: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .row .mega-links li {
+        padding: 0 20px;
+    }
+
+    .row .mega-links li a {
+        padding: 0px;
+        padding: 0 20px;
+        color: #000000;
+        font-size: 17px;
+        display: block;
+    }
+
+    .row .mega-links li a:hover {
+        color: #f2f2f2;
+    }
+
+    .wrapper .btn {
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .wrapper .btn.close-btn {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+        color: #000;
+    }
+
+    @media screen and (max-width: 970px) {
+        .wrapper .btn {
+            display: block;
+            padding: 0;
+        }
+
+        .wrapper .nav-links {
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            max-width: 350px;
+            top: 0;
+            left: -100%;
+            background: #ffffff;
+            display: block;
+            padding: 50px 10px;
+            line-height: 50px;
+            overflow-y: auto;
+            box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+            transition: all 0.3s ease;
+        }
+
+        /* custom scroll bar */
+        /* ::-webkit-scrollbar {
+          width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #242526;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #3A3B3C;
+        } */
+        #menu-btn:checked~.nav-links {
+            left: 0%;
+        }
+
+        #menu-btn:checked~.btn.menu-btn {
+            display: none;
+        }
+
+        #close-btn:checked~.btn.menu-btn {
+            display: block;
+        }
+
+        /* .nav-links li{
+          margin: 15px 10px;
+        } */
+        .nav-links li a {
+            padding: 0 20px;
+            display: block;
+            font-size: 20px;
+        }
+
+        .nav-links .drop-menu {
+            position: static;
+            opacity: 1;
+            top: 65px;
+            visibility: visible;
+            padding-left: 20px;
+            width: 100%;
+            max-height: 0px;
+            overflow: hidden;
+            box-shadow: none;
+            transition: all 0.3s ease;
+        }
+
+        #showDrop:checked~.drop-menu,
+        #showMega:checked~.mega-box {
+            max-height: 100%;
+        }
+
+        .nav-links .desktop-item {
+            display: none;
+        }
+
+        .nav-links .mobile-item {
+            display: block;
+            color: #000000;
+            font-size: 20px;
+            font-weight: 500;
+            padding-left: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links .mobile-item:hover {
+            background: #e6e6e6;
+        }
+
+        .drop-menu li {
+            margin: 0;
+        }
+
+        .drop-menu li a {
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .mega-box {
+            position: static;
+            top: 65px;
+            opacity: 1;
+            visibility: visible;
+            padding: 0 20px;
+            max-height: 0px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mega-box .content {
+            box-shadow: none;
+            flex-direction: column;
+            padding: 20px 20px 0 20px;
+        }
+
+        .mega-box .content .row {
+            width: 100%;
+            margin-bottom: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .mega-box .content .row:nth-child(1),
+        .mega-box .content .row:nth-child(2) {
+            border-top: 0px;
+        }
+
+        .content .row .mega-links {
+            border-left: 0px;
+            padding-left: 15px;
+        }
+
+        .row .mega-links li {
+            margin: 0;
+        }
+
+        .content .row header {
+            font-size: 19px;
+        }
+    }
+
+    nav input {
+        display: none;
+    }
+
+    /* ----------------------------------------------Header CSS End---------------------------------------------- */
+
+    /* ----------------------------------------------Footer CSS---------------------------------------------- */
+
+    .footer {
+        margin-top: 40px;
+    }
+
+
+
+
+    /* ----------------------------------------------Footer CSS End---------------------------------------------- */
+
+
+
+    /* ----------------------------------------------Common Widget CSS---------------------------------------------- */
+
+
+    h2 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: capitalize;
+        color: #000000;
+        margin: 0;
+    }
+
+    .button1 {
+        background: #254896;
+        color: #fff;
+        border-radius: 4px;
+        padding: 7px 24px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: none;
+        height: 38px;
+    }
+
+    .button2 {
+        background: #ffffff;
+        color: #254896;
+        ;
+        border: 1px solid #254896;
+        border-radius: 4px;
+        padding: 6px 12px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: none;
+        height: 32px;
+    }
+
+    .btn-spacing {
+        padding: 0 !important;
+    }
+
+
+    table {
+        width: 100%;
+    }
+
+    th {
+        background-color: #EDF0F6;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        color: #254896;
+        padding: 20px 12px !important;
+    }
+
+    td {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #4F4F4F;
+    }
+
+    td,
+    th {
+        text-align: center;
+        padding: 12px;
+    }
+
+    tr:nth-child(odd) {
+        background-color: rgba(246, 246, 246, 0.58);
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+        padding-left: 25px !important;
+    }
+
+    th:last-child,
+    td:last-child {
+        padding-right: 25px !important;
+    }
+
+    .widget-parent {
+        position: relative;
+        padding: 0px 12px;
+    }
+
+    /* ----------------------------------------------Common Widget CSS End---------------------------------------------- */
+
+
+
+    /* ----------------------------------------------Dahboard1 CSS---------------------------------------------- */
+
+    .welcome {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+
+
+    .welcome h2 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: capitalize;
+        color: #254896;
+        margin: 0;
+    }
+
+    /* Widget1 CSS */
+
+    .tab-pane {
+        width: auto;
+        height: 75%;
+    }
+
+    .blueparent {
+        padding: 0 12px;
+    }
+
+    .fade:not(.show) {
+        display: none;
+    }
+
+
+    .bluewidget {
+        background: #EAF0FF;
+        border-radius: 15px;
+        width: 100%;
+        padding: 22px;
+        text-align: center;
+        margin-bottom: 24px !important;
+    }
+
+    .bluewidget h3 {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 40px;
+        color: #3B5BA1;
+        margin: 0;
+    }
+
+    .bluewidget span {
+        font-family: 'Roboto';
+    }
+
+    .bluewidget p {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #6880B6;
+        margin: 0;
+        margin: 9px 0;
+    }
+
+    .bluewidget h6 {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        color: #23262F;
+        margin: 0;
+        margin-left: 5px;
+        margin-right: -10px;
+    }
+
+    .w1chartside {
+        background: #FFFFFF;
+        border-radius: 16px;
+        padding: 16px 16px;
+        width: 100%;
+        height: 100%;
+        margin-left: 0px;
+    }
+
+    .w1metas {
+        display: block;
+    }
+
+    .w1metas .nav {
+        margin-left: -10px;
+        margin-top: 1rem;
+    }
+
+    .w1metas h2 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: capitalize;
+        color: #000000;
+    }
+
+    .w1metadata {
+        display: flex;
+    }
+
+
+
+    .w1metas button,
+    .w1metas .w1gstock {
+        padding: 6px 12px;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 18px;
+        letter-spacing: 0.003em;
+        color: #23262F;
+        border-radius: 56px;
+        background-color: #fff;
+        border: 0;
+    }
+
+    .w1metas .active {
+        background: rgba(215, 221, 236, 0.28);
+        border-radius: 56px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.003em;
+        color: #254896;
+    }
+
+    .w1gstock {
+        display: flex !important;
+        align-items: center;
+    }
+
+    .w1gstock div {
+        background: #87AA63;
+        width: 8px;
+        height: 8px;
+        border-radius: 10px;
+        margin-right: 4px;
+    }
+
+    /* Widget1 CSS End*/
+
+    /* Widget2 CSS*/
+
+    .widget2 {
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 16px;
+    }
+
+    .widget2 .right {
+        text-align: end;
+        display: none;
+    }
+
+
+    .widget2 .head {
+        margin-bottom: 30px;
+    }
+
+    .widget2 .dropdown-toggle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.003em;
+        color: #72747D;
+        text-decoration: none;
+    }
+
+
+    .goalnumrow h3 {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 40px;
+        color: #3B5BA1;
+    }
+
+    .goalnumrow span {
+        font-family: 'Roboto';
+    }
+
+    .goalnumrow p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.003em;
+        color: #7D7D7D;
+    }
+
+    .goalinfo h5 {
+        text-align: left;
+        font-weight: 600;
+        font-size: 9px;
+        line-height: 12px;
+        color: #353945;
+    }
+
+    /* Widget2 CSS End*/
+
+    /* Widget3 CSS*/
+
+    .widget3 {
+        background-color: #fff;
+        border-radius: 16px;
+    }
+
+
+    .widget3 .right {
+        text-align: end;
+        display: none;
+    }
+
+    .widget3 .head {
+        background: #EAF0FF;
+        border-radius: 16px 16px 0px 0px;
+        padding: 12px 4px;
+        align-items: center;
+    }
+
+    .widget3 .body {
+        padding: 12px 4px;
+    }
+
+    .widget3 h6 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #3B5BA1;
+    }
+
+
+
+    /* Widget3 CSS End*/
+
+    /* Widget4 CSS*/
+
+    .widget4 {
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 0;
+    }
+
+
+
+
+    .widget4 .right {
+        align-items: center;
+        justify-content: flex-end;
+        display: none;
+    }
+
+    .widget4 .head {
+        background: #EAF0FF;
+        border-radius: 16px 16px 0px 0px;
+        padding: 16px;
+        align-items: center;
+    }
+
+    .widget4 a#dropdownMenuLink {
+        background: white;
+        color: #7D7D7D;
+        margin-right: 14px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .widget4 .plnumbers {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .widget4 .plnumber {
+        width: auto;
+        text-align: left;
+    }
+
+    .widget4 h3 {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 40px;
+        color: #3B5BA1;
+    }
+
+    .widget4 table {
+        margin-bottom: 16px;
+    }
+
+    .tablew4-p {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .tablew4-p .pagination {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .tablew4-p .pagination a {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #72747D;
+        float: left;
+        padding: 8px 14px;
+        text-decoration: none;
+    }
+
+    .pagination a:nth-child(1) {
+        font-family: monospace !important;
+    }
+
+    .pagination a:last-child {
+        font-family: monospace !important;
+    }
+
+    .tablew4-p .pagination a.active {
+        background: #EFF8FF;
+        color: #004BAF;
+        border-radius: 5px;
+    }
+
+    .tablew4-p .pagination a:hover:not(.active) {
+        color: #72747D;
+        border-radius: 5px;
+    }
+
+
+    /* Widget4 CSS End*/
+
+    /* Quick Access */
+
+    .d-quick-access {
+        padding: 20px 16px;
+    }
+
+    .d-quick-access .bluebox {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .d-quick-access .bluebox h3 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0;
+        margin-top: 13px;
+    }
+
+    /* Quick Access End*/
+
+    /* Explore*/
+
+    .d-explore {
+        padding: 20px;
+    }
+
+    .d-explore .explore-box {
+        margin-top: 20px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 24px 16px;
+    }
+
+    .d-explore .explore-box h3 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        color: #000000;
+        margin-bottom: 18px;
+
+    }
+
+    .d-explore .explore-box p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 18px;
+    }
+
+
+    /* Explore End*/
+
+    /* ----------------------------------------------Dahboard1 CSS End---------------------------------------------- */
+
+
+    /* ----------------------------------------------Reports CSS---------------------------------------------- */
+
+    .report-top-container {
+        padding: 40px 12px 8px 12px;
+        border-bottom: 0.5px solid #7D7D7D;
+        ;
+        overflow: hidden;
+    }
+
+    .report-chip-row .left,
+    .report-chip-row .right {
+        width: -webkit-fill-available;
+        margin-right: 0px;
+        margin-bottom: 12px;
+    }
+
+    .report-chip li {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        color: #23262F;
+        padding: 8px 16px;
+        margin-right: 20px;
+    }
+
+    .report-chip .active {
+        background: #EAF0FF;
+        border-radius: 69px;
+        color: #254896;
+    }
+
+    /* Reports WidgetRP1 */
+
+    .reports-extra {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .reports-extra ul>* {
+        align-self: center;
+    }
+
+    .reports-extra ul button {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        margin-right: 22px;
+        padding: 6px 12px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .reports-extra .active {
+        border-radius: 100px;
+        color: #254896;
+        background: #EDF0F6;
+    }
+
+    .reports-extra .dropdown,
+    .reports-extra .dropdown-item {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        color: #7D7D7D;
+    }
+
+    .reports-extra .dropdown-toggle {
+        padding: 10px;
+        background: #FFFFFF;
+        border: 1px solid #EBEEF2;
+        box-shadow: 0px 1px 3px rgba(96, 108, 128, 0.05);
+        border-radius: 4px;
+    }
+
+    /* Reports WidgetRP1 End */
+
+    /* Reports WidgetRP2 */
+
+    .reports-mands {
+        background: #FFFFFF;
+        border-radius: 16px;
+        padding: 24px;
+    }
+
+    .rp-market {
+        margin-bottom: 20px;
+    }
+
+    .rp-s-m {
+        margin-bottom: 0px;
+    }
+
+    .reports-mands .rp-border {
+        margin-bottom: 0px;
+        margin-top: 9px;
+        border-bottom: 1px solid #EEEEEE;
+    }
+
+    .rpw2legend {
+        display: flex;
+        align-items: center;
+    }
+
+    .rpw2legend ul {
+        margin: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+    }
+
+    .rpw2legend li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+    }
+
+    .rpw2legend .rpw2stc div {
+        width: 8px;
+        height: 8px;
+        border-radius: 10px;
+        margin-right: 4px;
+    }
+
+    /* Reports WidgetRP2 End*/
+
+    /* Reports WidgetRP3 */
+
+    .reports-sandh {
+        background: #FFFFFF;
+        border-radius: 16px;
+        padding: 24px;
+    }
+
+    .rp-holdings {
+        background: #FFFFFF;
+        border-radius: 16px;
+        padding: 24px 0;
+        height: 100%;
+    }
+
+    .rp-holdings .row>:nth-child(2) {
+        display: none;
+    }
+
+    .rpholdingshead {
+        padding: 0 24px 12px 24px;
+    }
+
+    .rpsandh-legend .row {
+        margin-left: -24px;
+        margin-right: -24px;
+        padding: 16px 24px;
+    }
+
+    .rpsandh-legend .left {
+        display: flex;
+    }
+
+    .rpsandh-legend .left div {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        border-radius: 100px;
+    }
+
+    .rpsandh-legend h3 {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        margin: 0;
+    }
+
+
+
+
+    /* Reports WidgetRP3 End*/
+
+    /* ----------------------------------------------Reports CSS End---------------------------------------------- */
+
+
+
+    /* ----------------------------------------------Reports-DP Holdings CSS---------------------------------------------- */
+
+    .report-dp-row .right {
+        display: block;
+    }
+
+    .report-dp-row input {
+        background: #FFFFFF;
+        border: 1px solid #C3C4CD;
+        border-radius: 4px;
+        padding: 10.5px 24px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        color: #7D7D7D;
+        margin-right: 14px;
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    /* .report-dp-row {
+        padding-bottom: 20px;
+    
+    } */
+
+    /* ----------------------------------------------Reports-DP Holdings CSS End---------------------------------------------- */
+
+
+    /* ----------------------------------------------Reports-Outstanding CSS---------------------------------------------- */
+
+    .report-os-row .right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .report-os-row .left {
+        display: flex;
+        align-items: center;
+    }
+
+    .report-top-container {
+        padding-bottom: 20px;
+    }
+
+
+
+
+
+    .os-table {
+        margin-top: 24px;
+        padding: 0;
+    }
+
+    .os-table table {
+        overflow: hidden;
+        border-radius: 16px;
+        margin-bottom: 16px;
+    }
+
+    .os-table td,
+    .os-table th {
+        text-align: left;
+    }
+
+    /* ----------------------------------------------Reports-Outstanding CSS End---------------------------------------------- */
+
+
+
+    /* ----------------------------------------------Reports-Ledger CSS---------------------------------------------- */
+
+
+    .report-bluewidget {
+        background: #EAF0FF;
+        border-radius: 15px;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .report-bluewidget h3 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 47px;
+        color: #254896;
+        margin: 0;
+    }
+
+    .report-bluewidget span {
+        font-family: 'Roboto';
+    }
+
+    .report-bluewidget p {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #516DAB;
+        margin: 0;
+        margin: 9px 0;
+    }
+
+    .rl-widget2 .rol .right {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-bottom: 10px;
+    }
+
+    .rl-widget2 .rol .right>* {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .rl-widget2 .left {
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+    }
+
+    .rl-widget2 .rol {
+        flex-direction: column-reverse;
+    }
+
+    .rl-widget2 .nav-link {
+        width: 110px;
+        background-color: #E6E8EC;
+        color: #777E91;
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    .rl-widget2 .nav-tabs {
+        border: none;
+    }
+
+    .rl-widget2 .nav-item {
+        margin-right: 10px;
+    }
+
+    .rl-widget2 .nav-item:last-child {
+        margin-right: 0px;
+    }
+
+    .rl-widget2 .nav-tabs .active {
+        background-color: #3B5BA1;
+        color: #fff;
+    }
+
+    .rl-widget2 .dropdown-toggle {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #72747D;
+        text-decoration: none;
+    }
+
+    .rl-widget2 .dropdown {
+        background: #fff;
+        color: #7D7D7D;
+        border: 1px solid #D9D9D9;
+        border-radius: 4px;
+        padding: 7px 16px;
+        text-decoration: none;
+        height: 38px;
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+
+    .rl-widget2 input {
+        background: #fff;
+        color: #7D7D7D;
+        border: 1px solid #D9D9D9;
+        border-radius: 4px;
+        padding: 7px 16px;
+        text-decoration: none;
+        height: 38px;
+    }
+
+    .rl-widget2 .dropdown,
+    .rl-widget2 .dropdown-item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #72747D;
+        text-decoration: none;
+    }
+
+    .rl-widget2 .dp-table {
+        margin-top: 0px;
+    }
+
+
+
+    /* ----------------------------------------------Reports-Ledger CSS End---------------------------------------------- */
+
+
+
+    /* ----------------------------------------------Reports-P-and-L CSS---------------------------------------------- */
+
+    .report-top-container .form-switch {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px 0px 0px 0px;
+    }
+
+    .report-top-container .form-check .form-check-input {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .report-top-container p {
+        margin: 0px;
+    }
+
+    .rep-top-pl a:hover {
+        color: inherit;
+    }
+
+    /* Reports-P-and-L-List */
+
+    .rpandl-list {
+        margin-top: 20px;
+        position: relative;
+        /* overflow-x: hidden; */
+    }
+
+    .rpandl-list .dropdown-toggle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #72747D;
+        text-decoration: none;
+        padding: 0;
+    }
+
+    .rpandl-list .dropdown {
+        background: #fff;
+        color: #7D7D7D;
+        border: 1px solid #D9D9D9;
+        border-radius: 4px;
+        padding: 7px 16px;
+        text-decoration: none;
+        height: 38px;
+        text-align: center;
+    }
+
+    .rpandl-list input {
+        background: #fff;
+        color: #7D7D7D;
+        border: 1px solid #D9D9D9;
+        border-radius: 4px;
+        padding: 7px 16px;
+        text-decoration: none;
+        height: 38px;
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #72747D;
+    }
+
+    .rpandl-list .dropdown,
+    .rpandl-list .dropdown-item {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #72747D;
+        text-decoration: none;
+    }
+
+    .rpandl-list .left {
+        display: flex;
+    }
+
+    .rpandl-list .one {
+        margin-left: 20px;
+    }
+
+    .rpandl-list .one-button {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 20px;
+        margin-top: 22px;
+    }
+
+    .rpandl-list label {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        color: #2C2C30;
+    }
+
+    .rpandl-list .tablew4-p {
+        margin-top: 20px;
+    }
+
+    .rpandl-list table {
+        overflow: hidden;
+        border-radius: 16px;
+        margin-bottom: 16px;
+        margin-top: 40px;
+    }
+
+
+    /* Reports-P-and-L-List End*/
+
+    /* Reports-P-and-L-Calender */
+    .rep-top-pl .form-check-input:disabled {
+        opacity: 1;
+    }
+
+    .rpandl-calendar .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rpandl-calendar .nav {
+        --bs-nav-link-padding-x: 1rem;
+        --bs-nav-link-padding-y: 0.5rem;
+        border-radius: 8px;
+        --bs-nav-link-color: var(--bs-link-color);
+        --bs-nav-link-hover-color: var(--bs-link-hover-color);
+        --bs-nav-link-disabled-color: #6c757d;
+    }
+
+    .rpandl-calendar .nav-tabs {
+        background: rgba(39, 41, 55, 0.05);
+        padding: 8px;
+        --bs-nav-tabs-border-width: 0px;
+        --bs-nav-tabs-border-radius: 5px;
+        --bs-nav-tabs-link-hover-border-color: #e9ecef #e9ecef #dee2e6;
+        --bs-nav-tabs-link-active-color: #495057;
+        --bs-nav-tabs-link-active-bg: #fff;
+        --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #fff;
+        border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
+    }
+
+    .rpandl-calendar .nav-tabs button {
+        border-radius: 5px;
+        text-align: center;
+        width: 80px;
+        margin-right: 8px;
+        margin-left: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #272937;
+    }
+
+    .pandlcal-colors {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pandlcal-colors img:last-child {
+        margin-right: 0px;
+    }
+
+    .rep-top-pl .form-check-input:checked {
+        background-color: #254896;
+        border-color: #254896;
+
+    }
+
+    .year .calendar table {
+        width: auto;
+        background: inherit;
+    }
+
+    .year .calendar th {
+        background-color: #EDF0F6;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        color: #254896;
+        padding: 20px 12px !important;
+    }
+
+
+    .year .calendar td {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #4F4F4F;
+    }
+
+    .year .calendar td,
+    .year .calendar th {
+        text-align: inherit;
+        padding: 4px 5px;
+    }
+
+    .year .calendar tr:nth-child(odd) {
+        background-color: inherit;
+    }
+
+    .year .calendar th:nth-child(1),
+    .year .calendar td:nth-child(1) {
+        padding-left: inherit;
+    }
+
+    .year .calendar th:last-child,
+    .year .calendar td:last-child {
+        padding-right: inherit;
+    }
+
+    .year .calendar table.month th.day-header {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #272937;
+    }
+
+    .year .calendar .months-container .month-container {
+        height: 300px;
+    }
+
+    .year .calendar {
+        margin-top: 40px;
+    }
+
+    #month .month {
+        margin-top: 40px;
+    }
+
+    #month .rbc-btn-group:last-child {
+        display: none;
+    }
+
+    #month .rbc-btn-group button:first-child {
+        display: none;
+    }
+
+    #month .rbc-btn-group button {
+        background: #254896;
+        color: #fff;
+        border-radius: 4px;
+        padding: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        text-decoration: none;
+        text-align: center;
+        margin-right: 12px;
+    }
+
+    #month .rbc-toolbar {
+        flex-direction: row-reverse;
+    }
+
+    #month .rbc-toolbar-label {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: capitalize;
+        text-align: left;
+    }
+
+    /* Reports-P-and-L-Calender End*/
+
+
+
+
+    /* ----------------------------------------------Reports-P-and-L CSS End---------------------------------------------- */
+
+
+    /* ----------------------------------------------Profile CSS---------------------------------------------- */
+
+    .profile-box-parent {
+        margin-top: 30px;
+    }
+
+    .profile-box-parent h3 {
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+
+
+
+    .profile-box-parent label {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        text-transform: capitalize;
+        color: #7D7D7D;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .profile-box-parent input {
+        margin-bottom: 24px;
+    }
+
+    .profile-box-parent .avatar-image {
+        border: 1px solid #D9D9D9;
+        border-radius: 8px;
+        width: 140px;
+    }
+
+    .profile-one-row {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    #img-label {
+        margin-bottom: 24px;
+    }
+
+    .profile-items {
+        background-color: #fff;
+        padding: 24px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #7D7D7D;
+        border-radius: 8px;
+        position: relative;
+        width: 100%;
+        margin: 0px 12px 0px 12px;
+    }
+
+    .profile-items a {
+        margin-bottom: 40px;
+    }
+
+    .profile-items img {
+        margin-right: 16px;
+    }
+
+    .profile-items a:last-child {
+        margin-bottom: 0px;
+    }
+
+    #personal-i,
+    #dp-details-i,
+    #bank-details-i {
+        border-bottom: 1px solid #D9D9D9;
+        padding: 10px 0;
+    }
+
+    #personal-i .per-h3 {
+        margin-top: 0px;
+    }
+
+    .pm-tables .filter {
+        margin-bottom: 20px;
+    }
+
+
+    .buttons-mob .right .button1 {
+        border-radius: 4px;
+        padding: 6px 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: none;
+        height: 32px;
+        margin-right: 12px;
+    }
+
+    .buttons-mob .right {
+        justify-content: flex-end !important;
+    }
+
+    .buttons-mob label {
+        margin-bottom: -4px;
+        margin-left: 6px;
+    }
+
+    /* ----------------------------------------------Profile CSS End---------------------------------------------- */
+
+    /* ----------------------------------------------Auth CSS---------------------------------------------- */
+
+    .auth-widget {
+        height: calc(100vh - 260px);
+        padding: 0 12px;
+    }
+
+    .auth-widget-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: #FFFFFF;
+        border: 1px solid #D9D9D9;
+        border-radius: 16px;
+        max-width: 460px;
+    }
+
+    .auth-widget img {
+        margin-bottom: 20px;
+    }
+
+    .auth-widget h3 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #2D3748;
+    }
+
+    .auth-widget p {
+        text-align: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(39, 44, 63, 0.45);
+        margin: 0;
+    }
+
+    .auth-widget label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.003em;
+        color: #2C2C30;
+        margin-top: 20px;
+    }
+
+    .auth-widget input {
+        padding: 8px 12px;
+        background: #FFFFFF;
+        border: 1px solid #C3C4CD;
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .auth-widget #check {
+        width: auto;
+    }
+
+    .remember-forgot .left label {
+        margin-left: 10px;
+    }
+
+    .remember-forgot .right {
+        text-align: right;
+        text-decoration: underline;
+    }
+
+    .auth-widget-box .button1 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* ----------------------------------------------Auth CSS End---------------------------------------------- */
+
+    .widgetgr1 .right h6 {
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .widgetgr2 .risk-box-2 {
+        height: 95%;
+        margin-top: 0px;
+    }
+
+    .col-lg-7 .risk-box-2 {
+        height: 100%;
+    }
+
+    .cg-parent .nav-link {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .cg-parent .tab-pane {
+        padding: 20px;
+    }
+
+    .cg-detail-box {
+        margin-top: 20px;
+        display: none;
+    }
+
+    input[type="radio"]+.radiolable {
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    .cg-parent .button1 {
+        width: 100%;
+    }
+
+    .cg-parent .nav-link h1 {
+        text-align: left;
+    }
+
+    /* ------------------------------------ Fund Transfer --------------------------------- */
+
+    .ft-widget2 .ncp {
+        margin: 0 0 24px 0;
+    }
+
+    .nse-bse {
+        padding: 30px 20px;
+    }
+
+    .nse-bse-cont {
+        padding-bottom: 12px;
+    }
+
+    .rp-input {
+        padding: 12px 20px;
+    }
+
+    .rp-btn-col {
+        margin: 0;
+    }
+
+    .dw-table {
+        margin: 60px 0 0 0;
+    }
+
+    .dw-table .tab-content {
+        padding: 0;
+    }
+
+    .dw-table .dp-mob-t {
+        margin-top: 0 !important;
+    }
+
+
+    .select li {
+        display: none;
+        cursor: pointer;
+        min-width: 150px;
+    }
+
+    .select li:first-child {
+        display: block;
+        border-top: 0px;
+    }
+
+    .select {
+        border: 1px solid black;
+        display: inline-block;
+        padding: 0;
+        border-radius: 4px;
+        position: relative;
+        width: 100%;
+    }
+
+    .select li:hover {
+        background-color: #ddd;
+    }
+
+    .select li:first-child:hover {
+        background-color: transparent;
+    }
+
+    .select.open li {
+        display: block;
+    }
+
+    .select span:before {
+        position: absolute;
+        top: 5px;
+        right: 25px;
+        content: url(../assets/angle-arrow-down.svg);
+        font-size: 26px;
+        color: #fff;
+    }
+
+    .select.open span:before {
+        content: url(../assets/angle-arrow-up.svg);
+    }
+
+    /* ------------------------------------ Fund Transfer End --------------------------------- */
+
+
+
+}
+
+/* Small Devices End*/
+
